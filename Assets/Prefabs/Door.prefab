@@ -145,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   isOpen: 0
+  gameManager: {fileID: 0}
