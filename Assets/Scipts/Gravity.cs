@@ -10,7 +10,7 @@ public class Gravity : MonoBehaviour
     void Update()
     {
         // Check if the space bar is pressed
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Vector2 newGravity = Physics2D.gravity;
             newGravity.y *= -1;
