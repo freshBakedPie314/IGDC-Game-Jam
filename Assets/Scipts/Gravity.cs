@@ -1,11 +1,11 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gravity : MonoBehaviour
 {
-    public string gravityAffectedTag = "GravityAffected";
-    private bool gravityInverted = false;
 
     void Update()
     {
@@ -16,5 +16,18 @@ public class Gravity : MonoBehaviour
             newGravity.y *= -1;
             Physics2D.gravity = newGravity;
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Vector2 newGravity = Physics2D.gravity;
+            if(newGravity.y > 0 ) newGravity.y *= -1;
+            Physics2D.gravity = newGravity;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

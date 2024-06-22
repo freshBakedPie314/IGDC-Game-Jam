@@ -6,9 +6,11 @@ public class Door : MonoBehaviour
 {
     public ButtonDoor button;
     public bool isOpen = false;
+    public Gravity gameManager;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<Gravity>();
         button = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonDoor>();
     }
 
@@ -22,6 +24,10 @@ public class Door : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && isOpen)
+        {
             Debug.Log("Next Level");
+            gameManager.LoadNextScene();
+        }
+            
     }
 }

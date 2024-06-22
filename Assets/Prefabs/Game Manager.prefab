@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9167989270749982515}
   m_Layer: 0
   m_Name: Game Manager
-  m_TagString: Untagged
+  m_TagString: Game Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,4 +44,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ffeea13b0338f468934f4f38fd6c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityAffectedTag: GravityAffected
