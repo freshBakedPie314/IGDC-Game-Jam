@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - Game Manager
+  - Conveyor
   layers:
   - Default
   - TransparentFX

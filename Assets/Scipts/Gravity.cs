@@ -6,7 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class Gravity : MonoBehaviour
 {
+    List<Conveyor> conveyors = new List<Conveyor>();
 
+    void Start()
+    {
+        GameObject[] go = GameObject.FindGameObjectsWithTag("Conveyor");
+        foreach (GameObject go2 in go)
+        {
+            conveyors.Add(go2.GetComponent<Conveyor>());
+        }
+    }
     void Update()
     {
         // Check if the space bar is pressed
@@ -23,6 +32,15 @@ public class Gravity : MonoBehaviour
             if(newGravity.y > 0 ) newGravity.y *= -1;
             Physics2D.gravity = newGravity;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            foreach(Conveyor conveyor in conveyors)
+            {
+                conveyor.switchDir();
+            }
         }
     }
 
