@@ -18,7 +18,7 @@ public class ButtonDoor : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("Here");
         isPresssed = true;

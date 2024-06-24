@@ -357,10 +357,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3970583616236997663, guid: abf6d7b9ad94c8c40bc1297cb875bf84, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 7a2383899c2ad074bbc7082ed456149d, type: 2}
     - target: {fileID: 6885560426333975656, guid: abf6d7b9ad94c8c40bc1297cb875bf84, type: 3}
       propertyPath: m_Name
       value: Box Movable
