@@ -20,6 +20,12 @@ public class Conveyor : MonoBehaviour
         Vector2 pos = rb.position;
         rb.position += Vector2.left * speed * Time.fixedDeltaTime * dir;
         rb.MovePosition(pos);
+
+        if (dir > 0)
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+        else
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+
     }
 
     public void switchDir()
