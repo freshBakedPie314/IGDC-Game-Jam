@@ -21,10 +21,10 @@ public class MovableBox : MonoBehaviour
     void Update()
     {
         Collider2D[] collisions = Physics2D.OverlapCircleAll(point.position, radius , layerMask);
-        if(collisions.Length > 1)
-        {
-            rb.mass = 0f;
-        }
+        //if(collisions.Length > 1)
+        //{
+        //    rb.mass = 0f;
+        //}
 
         //Collider2D[] groundCheck = Physics2D.OverlapCircleAll(transform.position, transform.localScale.x*1.414f);
         //if(groundCheck.Length <= 1)
