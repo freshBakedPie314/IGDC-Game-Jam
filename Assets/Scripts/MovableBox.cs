@@ -9,8 +9,11 @@ public class MovableBox : MonoBehaviour
     public Transform point;
     public float radius;
     public LayerMask layerMask;
+    public bool isGrounded;
+    //public float gCRadius;
     void Start()
     {
+        //gCRadius = 0.84f;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -22,5 +25,19 @@ public class MovableBox : MonoBehaviour
         {
             rb.mass = 0f;
         }
+
+        //Collider2D[] groundCheck = Physics2D.OverlapCircleAll(transform.position, transform.localScale.x*1.414f);
+        //if(groundCheck.Length <= 1)
+        //{
+        //    isGrounded = false;
+        //    rb.velocity = new Vector2(0f , rb.velocity.y);
+        //}
+        //else
+        //    isGrounded= true;
     }
+
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, gCRadius);
+    //}
 }

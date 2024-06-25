@@ -19,6 +19,11 @@ public class Door : MonoBehaviour
     {
         if(button != null)
         isOpen = button.isPresssed;
+
+        if (isOpen)
+            GetComponentInChildren<SpriteRenderer>().color = Color.black;
+        else
+            GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
