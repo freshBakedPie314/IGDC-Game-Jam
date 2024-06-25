@@ -8,10 +8,13 @@ public class ButtonDoor : MonoBehaviour
     public bool isPresssed = false;
     public GameObject button;
     Vector3 originalPos;
+    AudioManager audioManager;
+    public AudioClip buttonPressSound;
     // Start is called before the first frame update
     void Start()
     {
         originalPos = button.transform.position;
+        audioManager = GameObject.FindGameObjectWithTag("Audio Manager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class ButtonDoor : MonoBehaviour
             button.transform.localPosition = pos;
 
             button.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+
+            audioManager.PlayAudio(buttonPressSound);
         }
         else if(!isPresssed && button.transform.position != originalPos)
         {

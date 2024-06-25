@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d49f2d51bc411f44aaf094b3e305fff3, type: 3}
-  m_Color: {r: 0.85660374, g: 0.8323602, b: 0.8323602, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -178,3 +178,5 @@ MonoBehaviour:
   button: {fileID: 0}
   isOpen: 0
   gameManager: {fileID: 0}
+  doorOpening: {fileID: 8300000, guid: a0e75fe964217f643be6263bacf72fba, type: 3}
+  doorClosing: {fileID: 8300000, guid: 396531be90b169a4fb1afe43c8d853ab, type: 3}

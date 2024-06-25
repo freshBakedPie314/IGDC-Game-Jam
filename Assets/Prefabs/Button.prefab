@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresssed: 0
   button: {fileID: 532124610239101316}
+  buttonPressSound: {fileID: 8300000, guid: 636e39d8980585b4496917ed81d06574, type: 3}
 --- !u!61 &8108188559473618297
 BoxCollider2D:
   m_ObjectHideFlags: 0
